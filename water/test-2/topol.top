@@ -2,7 +2,7 @@
 ;	File 'topol.top' was generated
 ;	By user: mirjr (1000)
 ;	On host: dev
-;	At date: Thu Feb 23 22:39:52 2023
+;	At date: Thu Feb 23 23:20:33 2023
 ;
 ;	This is a standalone topology file
 ;
@@ -18,10 +18,10 @@
 ;
 
 ; Include forcefield parameters
-#include "charmm27.ff/forcefield.itp"
+#include "oplsaa.ff/forcefield.itp"
 
 ; Include water topology
-#include "charmm27.ff/spc.itp"
+#include "oplsaa.ff/spc.itp"
 
 #ifdef POSRES_WATER
 ; Position restraint for each water oxygen
@@ -31,7 +31,7 @@
 #endif
 
 ; Include topology for ions
-#include "charmm27.ff/ions.itp"
+#include "oplsaa.ff/ions.itp"
 
 [ system ]
 ; Name
@@ -39,5 +39,4 @@
 
 [ molecules ]
 ; Compound        #mols
-SOL               216
-HOH               510
+SOL               510

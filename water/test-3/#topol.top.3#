@@ -2,7 +2,7 @@
 ;	File 'topol.top' was generated
 ;	By user: mirjr (1000)
 ;	On host: dev
-;	At date: Thu Feb 23 22:39:52 2023
+;	At date: Sat Feb 25 00:07:54 2023
 ;
 ;	This is a standalone topology file
 ;
@@ -11,17 +11,17 @@
 ;	
 ;	Executable:   /usr/bin/gmx
 ;	Data prefix:  /usr
-;	Working dir:  /home/mirjr/Documents/github/bioinfo/gromacs/water/test-2
+;	Working dir:  /home/mirjr/Documents/github/bioinfo/gromacs/water/test-3
 ;	Command line:
 ;	  gmx pdb2gmx -f spc216.gro
 ;	Force field was read from the standard GROMACS share directory.
 ;
 
 ; Include forcefield parameters
-#include "charmm27.ff/forcefield.itp"
+#include "oplsaa.ff/forcefield.itp"
 
 ; Include water topology
-#include "charmm27.ff/spc.itp"
+#include "oplsaa.ff/spc.itp"
 
 #ifdef POSRES_WATER
 ; Position restraint for each water oxygen
@@ -31,12 +31,14 @@
 #endif
 
 ; Include topology for ions
-#include "charmm27.ff/ions.itp"
+#include "oplsaa.ff/ions.itp"
 
 [ system ]
 ; Name
-216H2O,WATJP01,SPC216,SPC-MODEL,300K,BOX(M)=1.86206NM,WFVG,MAR. 1984
+216H2O,WATJP01,SPC216,SPC-MODEL,300K,BOX(M)=1.86206NM,WFVG,MAR. 1984 in water
 
 [ molecules ]
 ; Compound        #mols
-SOL               216
+SOL         490
+NA               10
+CL               10
